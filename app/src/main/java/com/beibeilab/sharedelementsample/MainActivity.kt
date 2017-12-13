@@ -55,4 +55,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    companion object ImageUrl{
+        val imageUrlMario = "https://cdn.vox-cdn.com/uploads/chorus_asset/file/9541193/mario_odyssey_review_screen_2.jpg"
+        val imageUrlPicasso = "http://i.imgur.com/DvpvklR.png"
+    }
+
 }
