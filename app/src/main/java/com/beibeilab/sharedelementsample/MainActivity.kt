@@ -1,9 +1,11 @@
 package com.beibeilab.sharedelementsample
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.beibeilab.sharedelementsample.actact.Activity101
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         /*  Anonymous inner classes | Object Expression */
         button1.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                Toast.makeText(this@MainActivity, "button 1 click", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, Activity101::class.java)
+                startActivity(intent)
             }
 
         })
