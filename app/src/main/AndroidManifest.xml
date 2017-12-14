@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".actact.Activity101"/>
         <activity android:name=".actact.Activity102"/>
+        <activity android:name=".actactfrag.Activity201"/>
+        <activity android:name=".actactfrag.Activity202"/>
     </application>
 
 </manifest>

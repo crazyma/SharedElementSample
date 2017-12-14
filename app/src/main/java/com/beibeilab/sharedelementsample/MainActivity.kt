@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.beibeilab.sharedelementsample.actact.Activity101
+import com.beibeilab.sharedelementsample.actactfrag.Activity201
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,8 +30,11 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
         /*  Lambda with parameter   */
-        button2.setOnClickListener { view -> {Toast.makeText(this, "button 2 click", Toast.LENGTH_SHORT).show()} }
+        button2.setOnClickListener {
+            startActivity(Intent(this@MainActivity, Activity201::class.java))
+        }
 
         /*  Lambda without parameter   */
         button3.setOnClickListener { Toast.makeText(this, "button 3 click", Toast.LENGTH_SHORT).show() }
