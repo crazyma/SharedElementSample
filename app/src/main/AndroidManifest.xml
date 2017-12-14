@@ -22,6 +22,9 @@
         <activity android:name=".actact.Activity102"/>
         <activity android:name=".actactfrag.Activity201"/>
         <activity android:name=".actactfrag.Activity202"/>
+        <activity android:name=".fragact.Activity301"/>
+        <activity android:name=".fragact.Activity302"/>
+
     </application>
 
 </manifest>

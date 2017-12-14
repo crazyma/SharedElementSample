@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import com.beibeilab.sharedelementsample.actact.Activity101
 import com.beibeilab.sharedelementsample.actactfrag.Activity201
+import com.beibeilab.sharedelementsample.fragact.Activity301
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         /*  Lambda without parameter   */
-        button3.setOnClickListener { Toast.makeText(this, "button 3 click", Toast.LENGTH_SHORT).show() }
+        button3.setOnClickListener { startActivity(Intent(this@MainActivity, Activity301::class.java)) }
 
         /*  Object Expression   */
         var clickListener4 = object : View.OnClickListener {
