@@ -22,6 +22,6 @@ class Fragment401: Fragment() {
     }
 
     private fun jump() {
-        (activity as Activity401).switchFragment()
+        (activity as Activity401).switchFragment(textView4, "tTextView444")
     }
 }
