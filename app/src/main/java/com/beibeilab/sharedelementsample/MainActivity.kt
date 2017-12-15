@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.beibeilab.sharedelementsample.actact.Activity101
 import com.beibeilab.sharedelementsample.actactfrag.Activity201
 import com.beibeilab.sharedelementsample.fragact.Activity301
+import com.beibeilab.sharedelementsample.fragfrag.Activity401
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         /*  Object Expression   */
         var clickListener4 = object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                Toast.makeText(this@MainActivity, "button 4 click", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@MainActivity, Activity401::class.java))
             }
         }
         button4.setOnClickListener(clickListener4)
