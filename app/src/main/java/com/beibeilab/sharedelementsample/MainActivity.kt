@@ -3,10 +3,13 @@ package com.beibeilab.sharedelementsample
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.content.ContextCompat.startActivity
 import android.view.View
 import android.widget.Toast
 import com.beibeilab.sharedelementsample.actact.Activity101
 import com.beibeilab.sharedelementsample.actactfrag.Activity201
+import com.beibeilab.sharedelementsample.actcirreveal.Activity501
+import com.beibeilab.sharedelementsample.actcirreveal.Activity502
 import com.beibeilab.sharedelementsample.fragact.Activity301
 import com.beibeilab.sharedelementsample.fragfrag.Activity401
 import kotlinx.android.synthetic.main.activity_main.*
@@ -54,9 +57,11 @@ class MainActivity : AppCompatActivity() {
         button5.setOnClickListener(clickListener5)
     }
 
-    class ClickListener5 : View.OnClickListener {
+    //  記得要加 `inner` 才可以 access 到 Outer Class
+    inner class ClickListener5 : View.OnClickListener {
         override fun onClick(view: View?) {
-            Toast.makeText(view!!.context, "button 5 click", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@MainActivity, Activity501::class.java)
+            startActivity(intent)
         }
 
     }
